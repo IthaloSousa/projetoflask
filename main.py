@@ -22,8 +22,7 @@ def register():
         user = User(name, email, pwd, usuario)
         db.session.add(user)
         db.session.commit()
-        except Exception:
-            return redirect(url_for('negado'))    
+        
     return render_template('register.html')
 
 

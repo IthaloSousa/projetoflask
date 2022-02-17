@@ -1,8 +1,18 @@
+<style>
+    input{
+        margin-bottom: 5px;
+    }
+</style>
 <form action="" method="post">
-    <input type="text" name="name" placeholder="Insira um nome">
-    <input type="email" name="email" placeholder="Insira um email">
-    <input type="password" name="password" placeholder="********">
-    <input type="text" name="usuario" placeholder="Nome de usuario">
+    <input type="text" name="name" placeholder="Insira um nome" required>
+    <br>
+    <input type="email" name="email" placeholder="Insira um email" required>
+    <br>
+    <input type="password" name="password" placeholder="********" required>
+    <br>
+    <input type="text" name="usuario" placeholder="Nome de usuario" required>
+    <br>
     <input type="submit" value="Cadastrar">
+    <br>
     <a href="{{ url_for('login') }}">Entrar</a>
 </form>
