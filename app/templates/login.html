@@ -1,0 +1,37 @@
+<style>
+    
+    form{
+        font-size: 1.5rem;
+        border: solid 2px;
+        width: 350px;
+        height: auto;
+        padding: 20px;
+        margin: 10% auto;
+        margin-bottom: 5px;
+    }
+    input{
+        border-radius: 4px;
+        border: solid 1px #056085;
+        margin-bottom: 5px;
+    }
+    h1{
+        color: #056085;
+    }
+    a{
+        color: #056085;
+        font-size: 1.0rem;
+        font-weight: bold;
+    }
+</style>
+<h1 align="center">
+    login<br>Study Now
+</h1>
+<form action="" method="post" align="center">
+    <input type="email" name="email" placeholder="Insira um email">
+    <input type="password" name="password" placeholder="********">
+    <br><input type="submit" value="Logar">
+</form>
+<p align="center">
+    Ainda não possui uma conta? clique 
+    <a href="{{ url_for('register') }}" >criar conta</a> e tenha acesso ao Study Now!
+</p>

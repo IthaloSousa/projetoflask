@@ -1,0 +1,27 @@
+<style>
+    h1, p{
+        color: #056085;;
+        text-align: center
+    }
+    a{
+        color: #00aeff;
+    }
+</style>
+
+{% if current_user.is_authenticated %}
+    <div>
+        <h1>Seja bem vindo (a) {{ current_user.usuario }}</h1>
+        <p>Esste texto aparece caso você esteja logado.</p>
+        <a href="{{ url_for('logout') }}">Sair</a>
+        
+    </div>
+    
+    {% else %}
+    <div>
+        <h1>Visitante</h1>
+        <p>Esste texto aparece caso você não esteja logado.</p>
+        <h3>Crie a sua conta em nosso site</h3>
+        <a href="{{ url_for('register') }}">criar conta</a>
+    </div>
+{% endif %}
+
